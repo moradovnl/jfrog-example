@@ -6,7 +6,7 @@ resources:
       path: moradovnl/jfrog-example
 
 pipelines:
-  - name: jfrognexploitoli
+  - name: nexploitoli
     steps:
       - name: nexploit
         type: Bash
