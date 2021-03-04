@@ -6,7 +6,7 @@ resources:
       path: NeuraLegion/jfrog-example
 
 pipelines:
-  - name: nexploit
+  - name: jfrognexploitoli
     steps:
       - name: nexploit
         type: Bash
@@ -14,7 +14,7 @@ pipelines:
           integrations:
             - name: Nexploit
           inputResources:
-            - name: jfrognexploit
+            - name: jfrognexploitoli
         execution:
           onExecute:
             - sudo apt update
