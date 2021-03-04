@@ -27,7 +27,6 @@ pipelines:
                 SCAN_ID=$(nexploit-cli scan:run                                                \
                   --name "💎 Broken Crystals for a #${res_jfrognexploit_commitSha} #${run_id}" \
                   --crawler https://brokencrystals.com                                         \
-                  --test "[xss]" \
                   --token $int_OliNexPloitDemo_NEXPLOIT_TOKEN)
             - printf "Scan was started with ID https://nexploit.app/scans/$SCAN_ID"
             - |
