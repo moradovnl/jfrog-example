@@ -12,7 +12,7 @@ pipelines:
         type: Bash
         configuration:
           integrations:
-            - name: Nexploit
+            - name: OliNexPloitDemo
           inputResources:
             - name: jfrognexploitoli
         execution:
@@ -27,13 +27,13 @@ pipelines:
                 SCAN_ID=$(nexploit-cli scan:run                                                \
                   --name "💎 Broken Crystals for a #${res_jfrognexploit_commitSha} #${run_id}" \
                   --crawler https://brokencrystals.com                                         \
-                  --token $int_Nexploit_NEXPLOIT_TOKEN)
+                  --token $int_OliNexPloitDemo_NEXPLOIT_TOKEN)
             - printf "Scan was started with ID https://nexploit.app/scans/$SCAN_ID"
             - |
               nexploit-cli scan:polling               \
                 --interval 30s                        \
                 --timeout 12m                         \
-                --token $int_Nexploit_NEXPLOIT_TOKEN  \
+                --token $int_OliNexPloitDemo_NEXPLOIT_TOKEN  \
                 --breakpoint high_issue $SCAN_ID
           onComplete:
-            - nexploit-cli scan:stop --token $int_Nexploit_NEXPLOIT_TOKEN $SCAN_ID
+            - nexploit-cli scan:stop --token $int_OliNexPloitDemo_NEXPLOIT_TOKEN $SCAN_ID
