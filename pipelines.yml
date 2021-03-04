@@ -2,7 +2,7 @@ resources:
   - name: jfrognexploitoli
     type: GitRepo
     configuration:
-      gitProvider: GH
+      gitProvider: OliGH
       path: moradovnl/jfrog-example
 
 pipelines:
